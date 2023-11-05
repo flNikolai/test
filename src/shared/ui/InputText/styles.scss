@@ -1,0 +1,42 @@
+.label {
+  display: block;
+  position: relative;
+  margin-bottom: 22px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--color-dark);
+}
+
+.input {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.07px;
+  border: 1.5px solid var(--color-white-50);
+  border-radius: 8px;
+  padding: 4.5px 16px;
+  width: 100%;
+  height: 46px;
+  transition: 0.3s;
+  outline: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &::placeholder {
+    color: var(--color-white-250);
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 5px 36px -5px var(--color-dark-rgba);
+  }
+
+  &:disabled {
+    border-color: transparent;
+    background-color: var(--color-white-50);
+    color: var(--color-white-400);
+  }
+}

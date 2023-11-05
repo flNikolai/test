@@ -1,0 +1,15 @@
+@mixin newFont($family, $pathName, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src:
+      url('/fonts/#{$pathName}.woff2') format('woff2'),
+      url('/fonts/#{$pathName}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include newFont('Montserrat', 'Montserrat-Regular', 400, normal);
+@include newFont('Montserrat', 'Montserrat-SemiBold', 600, normal);
+@include newFont('Montserrat', 'Montserrat-Bold', 700, normal);
